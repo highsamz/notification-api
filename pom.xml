@@ -13,31 +13,19 @@
 	</parent>
 
 	<groupId>br.com</groupId>
-	<artifactId>avaliacao-globo</artifactId>
+	<artifactId>notification-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>avaliacao-globo</name>
-	<description>Projeto desenvolvido para avaliação técnica da Globo</description>
+	<name>notification-api</name>
+	<description>API responsável por receber notificações e publicá-las no RabbitMQ</description>
 
 	<properties>
 		<java.version>21</java.version>
-		<mapstruct.version>1.5.5.Final</mapstruct.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.mapstruct</groupId>
-			<artifactId>mapstruct</artifactId>
-			<version>${mapstruct.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
 		<dependency>
@@ -48,22 +36,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-database-postgresql</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
@@ -97,11 +69,6 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-						</path>
-						<path>
-							<groupId>org.mapstruct</groupId>
-							<artifactId>mapstruct-processor</artifactId>
-							<version>${mapstruct.version}</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
